@@ -25,10 +25,10 @@ After you have finished development, prepare a demo of your application to the c
 SPLIT: 
 
 Theo:
-    while loop
-    protect against invalid URLs - validators 
+    - [] while loop
+    - [] protect against invalid URLs - validators 
 
 Serena: 
-    shorten(URL)
-    store() - returns null, adds to dictionary , count
-    print_shorten(link)
+    - [] shorten(dict, URL) - returns shortened
+    - [] store(dict) - returns null, adds to dictionary , count
+    - [] print_shorten(dict, link)
