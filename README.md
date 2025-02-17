@@ -21,3 +21,14 @@ Decide on the number of application features that you can complete within the
 timeframe. 
 
 After you have finished development, prepare a demo of your application to the class.
+
+SPLIT: 
+
+Theo:
+    while loop
+    protect against invalid URLs - validators 
+
+Serena: 
+    shorten(URL)
+    store() - returns null, adds to dictionary , count
+    print_shorten(link)
