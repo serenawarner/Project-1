@@ -29,6 +29,6 @@ Theo:
     - [] protect against invalid URLs - validators 
 
 Serena: 
-    - [] shorten(dict, URL) - returns shortened
-    - [] store(dict) - returns null, adds to dictionary , count
-    - [] print_shorten(dict, link)
+    - [x] shorten(URL) - returns shortened
+    - [x] store() - returns null, adds to dictionary
+    - [x] print_shorten(dict, link)
