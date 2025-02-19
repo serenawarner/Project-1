@@ -4,7 +4,7 @@ class URLs:
         self.count = 0
 
     def shorten(self,URL):
-        url =  "https://www.myLink.com/short" + str(self.count)
+        url =  "https://myLink.com/short" + str(self.count)
         self.count+=1
         return url
 
@@ -31,7 +31,7 @@ state = "0"
 url = URLs()
 
 while(state != "00"):
-    print("Would you like to: \n\nStore a URl (0), \nStore and return a shortened URL (1), \nlist stored URLs (2), \nDisplay number of stored URLs (3), \nReturn a full URL from a shortened input (4) \n\n")
+    print("Would you like to: \n   (0) Store a URl\n   (1) Store and return a shortened URL\n   (2) List stored URLs\n   (3) Display number of stored URLs\n   (4) Return a full URL from a shortened input\n")
     state = input()
     if(state == "0"):
         link = input("Please input your link: ")
