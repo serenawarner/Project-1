@@ -26,7 +26,7 @@ SPLIT:
 
 Theo:
     while loop
-    protect against invalid URLs - validators 
+    ~~protect against invalid URLs - validators~~ *fix validation code*
 
 Serena: 
     shorten(URL)
