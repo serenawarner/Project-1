@@ -1,5 +1,3 @@
-import validators 
-
 class URLs:
     def __init__(self):
         self.links = {}
@@ -10,7 +8,6 @@ class URLs:
         url =  "www.myLink.com/" + str(self.count)
         self.count+=1
         return url
-        
 
     def store(self,URL):
         self.links[URL] = self.shorten(URL)
