@@ -23,7 +23,7 @@ class URLs:
     def findShortened(self, search):
         for key, val in self.links.items():
             if val == search:
-                return val
+                return key
 
 
 state = "0"
@@ -46,5 +46,6 @@ while(state != "00"):
         print(url.getCount())
     if(state == "4"):
         shortLink = input("Please input a shortened link: ")
-        print(url.findShortened("https://www.myLink.com/short0"))
+        print(url.findShortened(shortLink))
 
+    print("-------------------------------------------------------------------------------------------")
