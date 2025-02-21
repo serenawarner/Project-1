@@ -25,6 +25,9 @@ class URLs:
             if val == search:
                 return key
 
+    def validate(URL):
+        return True
+
 
 state = "0"
 
@@ -35,11 +38,13 @@ while(state != "00"):
     state = input()
     if(state == "0"):
         link = input("Please input your link: ")
-        url.store(link)
+        if(url.validate(link)):
+            url.store(link)
     if(state == "1"):
         link = input("Please input your link: ")
-        url.store(link)
-        url.printShorten(link)
+        if(url.validate(link)):
+            url.store(link)
+            url.printShorten(link)
     if(state == "2"):
         url.printURLs()
     if(state == "3"):
