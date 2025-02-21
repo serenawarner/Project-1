@@ -1,4 +1,32 @@
+class URLs:
+    def __init__(self):
+        self.links = {}
+        self.count = 0
 
+    def shorten(self,URL):
+        url =  "https://myLink.com/short" + str(self.count)
+        self.count+=1
+        return url
+
+    def store(self,URL):
+        self.links[URL] = self.shorten(URL)
+
+    def printShorten(self,URL):
+        print(self.links[URL])
+
+    def printURLs(self):
+        print(self.links)
+
+    def getCount(self):
+        return self.count
+    
+    def findShortened(self, search):
+        for key, val in self.links.items():
+            if val == search:
+                return key
+
+    def validate(URL):
+        return True
 
 state = "0"
 
