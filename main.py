@@ -26,11 +26,24 @@ class URLs:
                 return key
 
     def validate(self,URL):
-        urlParts = ["","",""]
-        for c in URL:
-            if c != ".":
+        https = URL[0:8]
+        newURL = URL[8:]
+        urlParts = []
+        count = 0
+        for split in newURL.split("."):
+            urlParts.append("")
+            for c in split:
+                urlParts[count] += c
+            count+=1
+        items = urlParts[-1].split("/")
+        urlParts.pop()
+        urlParts.extend(items)
+        items2 = items[-1].split("?")
+        urlParts.pop()
+        urlParts.extend(items2)
 
-        if(URL[0:8].lower() != "https://"):
+        print(urlParts)
+        if(https.lower() != "https://"):
             return False
         return True
 
