@@ -1,3 +1,4 @@
+import re
 class URLs:
     def __init__(self):
         self.links = {}
@@ -25,31 +26,11 @@ class URLs:
             if val == search:
                 return key
 
-    def validate(self,URL):
-        https = URL[0:8]
-        newURL = URL[8:]
-        urlParts = []
-        count = 0
-        for split in newURL.split("."):
-            for c in split:
-                urlParts[count] += c
-            count+=1
-        items = urlParts[-1].split("/")
-        urlParts.pop()
-        urlParts.extend(items)
-        items2 = items[-1].split("?")
-        urlParts.pop()
-        urlParts.extend(items2)
-
-        print(urlParts)
-
-        subdomains = []
-        index = 0
-        #if(urlParts[index] not in subdomains):
-            
-        
-        if(https.lower() != "https://"):
+    def validate(self,URL):        
+        x = re.search("https://.*\\..*/.*", URL)
+        if x == None:
             return False
+
         return True
 
 
@@ -62,13 +43,15 @@ while(state != "00"):
     state = input()
     if(state == "0"):
         link = input("Please input your link: ")
-        if(url.validate(link)):
+        x = url.validate(link)
+        if(x):
             url.store(link)
         else:
             print("Invalid link")
     if(state == "1"):
         link = input("Please input your link: ")
-        if(url.validate(link)):
+        x = url.validate(link)
+        if(x):
             url.store(link)
             url.printShorten(link)
         else:
