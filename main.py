@@ -31,7 +31,6 @@ class URLs:
         urlParts = []
         count = 0
         for split in newURL.split("."):
-            urlParts.append("")
             for c in split:
                 urlParts[count] += c
             count+=1
@@ -43,6 +42,12 @@ class URLs:
         urlParts.extend(items2)
 
         print(urlParts)
+
+        subdomains = []
+        index = 0
+        #if(urlParts[index] not in subdomains):
+            
+        
         if(https.lower() != "https://"):
             return False
         return True
