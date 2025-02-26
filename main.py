@@ -20,14 +20,14 @@ class URLs:
     def getCount(self):
         return self.count
     
-    def findShortened(self, search):
+    def findShortened(self, search): 
         for key, val in self.links.items():
             if val == search:
                 return key
 
     def validate(URL):
         return True
-
+ 
 
 state = "0"
 
