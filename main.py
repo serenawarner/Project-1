@@ -26,31 +26,27 @@ class URLs:
                 return key
 
     def validate(self,URL):
-        https = URL[0:8]
-        newURL = URL[8:]
-        urlParts = []
-        count = 0
-        for split in newURL.split("."):
-            for c in split:
-                urlParts[count] += c
-            count+=1
-        items = urlParts[-1].split("/")
-        urlParts.pop()
-        urlParts.extend(items)
-        items2 = items[-1].split("?")
-        urlParts.pop()
-        urlParts.extend(items2)
+        dotindex = 0
+        slashindex = 0
+        domain = ""
+        domaincheck = ["com", "net", "org", "gov"]
+        counter = 0
+        for i in URL:
+            if i == ".":
+                dotindex = URL[counter]
+            counter + 1
+        #print(dotindex)
+        for i in URL:
+            counter = 0
+            if i == "/":
+                slashindex = URL[counter]
+            counter + 1
+        domain = URL[dotindex:slashindex]
+        for i in domaincheck:
+            if domain == i:
+                return True
+        return False
 
-        print(urlParts)
-
-        subdomains = []
-        index = 0
-        #if(urlParts[index] not in subdomains):
-            
-        
-        if(https.lower() != "https://"):
-            return False
-        return True
  
 
 state = "0"
