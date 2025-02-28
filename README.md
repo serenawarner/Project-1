@@ -32,3 +32,5 @@ Serena:
     - [x] shorten(URL) - returns shortened
     - [x] store() - returns null, adds to dictionary
     - [x] print_shorten(dict, link)
+
+## sorry i lowkey abandoned you today lol im at state speech finals rn --theo
