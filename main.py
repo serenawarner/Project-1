@@ -1,4 +1,6 @@
 import re
+import module
+
 class URLs:
     def __init__(self):
         self.links = {}
@@ -33,14 +35,7 @@ class URLs:
 
         return True
 
-
-state = "0"
-
-url = URLs()
-
-while(state != "00"):
-    print("Would you like to: \n   (0) Store a URL\n   (1) Store and return a shortened URL\n   (2) List stored URLs\n   (3) Display number of stored URLs\n   (4) Return a full URL from a shortened input\n")
-    state = input()
+def run(state, url):
     if(state == "0"):
         link = input("Please input your link: ")
         x = url.validate(link)
@@ -65,3 +60,15 @@ while(state != "00"):
         print(url.findShortened(shortLink))
 
     print("-------------------------------------------------------------------------------------------")
+
+def testing():
+    module.input = lambda: '0'
+
+state = "0"
+
+url = URLs()
+
+while(state != "00"):
+    print("Would you like to: \n   (0) Store a URL\n   (1) Store and return a shortened URL\n   (2) List stored URLs\n   (3) Display number of stored URLs\n   (4) Return a full URL from a shortened input\n")
+    state = input()
+    run(state,url)
